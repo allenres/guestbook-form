@@ -1,0 +1,30 @@
+html {
+    background-color:ghostwhite;
+}
+
+body {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(58, 58, 58);
+}
+
+h1 {
+    text-align: center;
+}
+
+button {
+    background-color: green;
+    color: white;
+    border-radius: 4px;
+    border: none;
+    padding: .5rem 1rem;
+}
+
+label {
+    font-weight:bold;
+}
+
