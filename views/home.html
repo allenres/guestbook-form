@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guestbook Form</title>
+</head>
+<body>
+    <h1>Contact Form</h1>
+    <form action="">
+        <label for="fname">First Name<input type="text" id="fname"></label>
+        <label for="lname">Last Name<input type="text" id="lname"></label>
+        <label for="job-title">Job Title<input type="text" id="job-title"></label>
+        <label for="company">Company<input type="text" id="company"></label>
+        <label for="lnk-in">LinkedIn URL<input type="url" id="lnk-in"></label>
+        <label for="email">Email Address<input type="email" id="email"></label>
+        
+        
+        
+        <label for="meeting">
+            How do we meet?
+            <select name="meeting" id="meeting">
+                <option value="none">Please select</option>
+            </select>
+        </label>
+        <label for="meeting-other">Other &#40;please specifiy&#41;<input type="text" id="meeting-other"></label>
+
+        <label for="message"><textarea name="message" id="message"></textarea></label>
+        <label for="mailing"><input type="checkbox" id="mailing">Please add me to your mailing list</label>
+
+        <label>Choose an email format: 
+            <label for="html-option"><input type="radio" value="html" name="format" id="html-option">HTML</label>
+            <label for="text-option"><input type="radio" value="text" name="format" id="text-option">Text</label>
+        </label>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
