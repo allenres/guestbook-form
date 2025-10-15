@@ -5,37 +5,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../public/images/1484799.png" type="image/x-icon">
     <link rel="stylesheet" href="../public/styles/style.css">
-    <title>Guestbook Form</title>
+    <title>Contact Form</title>
 </head>
 <body>
-    <h1>Contact Form</h1>
-    <form action="">
-        <label for="fname">First Name<input type="text" id="fname"></label>
-        <label for="lname">Last Name<input type="text" id="lname"></label>
-        <label for="job-title">Job Title<input type="text" id="job-title"></label>
-        <label for="company">Company<input type="text" id="company"></label>
-        <label for="lnk-in">LinkedIn URL<input type="url" id="lnk-in"></label>
-        <label for="email">Email Address<input type="email" id="email"></label>
-        
-        
-        
-        <label for="meeting">
-            How do we meet?
-            <select name="meeting" id="meeting">
-                <option value="none">Please select</option>
-            </select>
-        </label>
-        <label for="meeting-other">Other &#40;please specifiy&#41;<input type="text" id="meeting-other"></label>
+    <div class="form-container">
+        <h1>Contact Form</h1>
+        <form action="">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="fname">
+                </div>
+                <div class="form-group">
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="lname">
+                </div>
+                <div class="form-group">
+                    <label for="job-title">Job Title</label>
+                    <input type="text" id="job-title" name="job-title">
+                </div>
+            </div>
 
-        <label for="message">Message<textarea name="message" id="message"></textarea></label>
-        <label for="mailing"><input type="checkbox" id="mailing">Please add me to your mailing list</label>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="company">Company</label>
+                    <input type="text" id="company" name="company">
+                </div>
+                <div class="form-group">
+                    <label for="lnk-in">LinkedIn URL</label>
+                    <input type="url" id="lnk-in" name="lnk-in">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email">
+                </div>
+            </div>
 
-        <label>Choose an email format: 
-            <label for="html-option"><input type="radio" value="html" name="format" id="html-option">HTML</label>
-            <label for="text-option"><input type="radio" value="text" name="format" id="text-option">Text</label>
-        </label>
+            <div class="form-row">
+                <div class="form-group meeting-select">
+                    <label for="meeting">How did we meet?</label>
+                    <select name="meeting" id="meeting">
+                        <option value="">Please select</option>
+                        </select>
+                </div>
+                <div class="form-group meeting-other">
+                    <label for="meeting-other">Other (please specify)</label>
+                    <input type="text" id="meeting-other" name="meeting-other">
+                </div>
+            </div>
 
-        <button type="submit">Submit</button>
-    </form>
+            <div class="form-group message-area">
+                <label for="message">Message</label>
+                <textarea name="message" id="message"></textarea>
+            </div>
+            
+            <div class="form-group checkbox-group">
+                <label for="mailing">
+                    <input type="checkbox" id="mailing" name="mailing">
+                    Please add me to your mailing list
+                </label>
+            </div>
+
+            <div class="form-group radio-group">
+                <p class="radio-label">Choose an email format:</p>
+                <label for="html-option" class="radio-option">
+                    <input type="radio" value="html" name="format" id="html-option" checked>
+                    HTML
+                </label>
+                <label for="text-option" class="radio-option">
+                    <input type="radio" value="text" name="format" id="text-option">
+                    Text
+                </label>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
 </body>
 </html>
