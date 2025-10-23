@@ -24,12 +24,16 @@ h1 {
     display: flex;
     gap: 20px;
     margin-bottom: 1rem;
+
+    align-items: stretch;
 }
 
 .form-group {
     flex: 1; /* all form-groups in a form-row are equal width */
     display: flex;
     flex-direction: column;
+
+    justify-content: flex-end;
 }
 
 .form-group label {
@@ -114,4 +118,17 @@ button[type="submit"] {
     padding: .6rem 1.5rem;
     cursor: pointer;
     font-size: 16px;
+}
+
+.error {
+    color: darkred;
+    display: none;
+}
+
+#mailing-format {
+    display: none;
+}
+
+#other-meeting-group {
+    display: none;
 }

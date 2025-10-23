@@ -5,19 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="images/1484799.png" type="image/x-icon">
     <link rel="stylesheet" href="styles/style.css">
+    <script src="js/formValidation.js" defer></script>
     <title>Contact Form</title>
 </head>
 <body>
     <div class="form-container">
         <h1>Contact Form</h1>
-        <form action="#">
+        <form action="#" id="form">
             <div class="form-row">
                 <div class="form-group">
                     <label for="fname">First Name</label>
+                    <span id="err-fname" class="error">Must enter your first name!</span>
                     <input type="text" id="fname" name="fname">
                 </div>
                 <div class="form-group">
                     <label for="lname">Last Name</label>
+                    <span id="err-lname" class="error">Must enter your last name!</span>                    
                     <input type="text" id="lname" name="lname">
                 </div>
                 <div class="form-group">
@@ -33,22 +36,28 @@
                 </div>
                 <div class="form-group">
                     <label for="lnk-in">LinkedIn URL</label>
-                    <input type="url" id="lnk-in" name="lnk-in">
+                    <span id="err-url" class="error">Must enter valid URL!</span>
+                    <input type="text" id="lnk-in" name="lnk-in">
                 </div>
                 <div class="form-group">
                     <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email">
+                    <span id="err-email" class="error">Your email must be valid!</span>
+                    <input type="text" id="email" name="email">
                 </div>
             </div>
 
             <div class="form-row">
                 <div class="form-group meeting-select">
                     <label for="meeting">How did we meet?</label>
+                    <span id="err-meeting" class="error">Must select an option!</span>
                     <select name="meeting" id="meeting">
-                        <option value="">Please select</option>
-                        </select>
+                        <option value="none">Please select</option>
+                        <option value="online">Online</option>
+                        <option value="in-person">In-Person</option>
+                        <option value="other">Other</option>
+                    </select>
                 </div>
-                <div class="form-group meeting-other">
+                <div class="form-group meeting-other" id="other-meeting-group">
                     <label for="meeting-other">Other (please specify)</label>
                     <input type="text" id="meeting-other" name="meeting-other">
                 </div>
@@ -66,7 +75,7 @@
                 </label>
             </div>
 
-            <div class="form-group radio-group">
+            <div class="form-group radio-group" id="mailing-format">
                 <p class="radio-label">Choose an email format:</p>
                 <label for="html-option" class="radio-option">
                     <input type="radio" value="html" name="format" id="html-option" checked>
