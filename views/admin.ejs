@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Stylesheet -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <link rel="stylesheet" href="//cdn.datatables.net/2.3.4/css/dataTables.dataTables.min.css">
+
+    <script src="//cdn.datatables.net/2.3.4/js/dataTables.min.js"></script>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/header-style.css">    
+    <title>Document</title>
+</head>
+<body>
+    <%- include('partials/header') %>
+    <h1>Admin Page</h1>
+    <% if(records.length !== 0) { %>
+        <table id="record-table" class="display">
+            <thead>
+                <tr>
+                    <td>Name</td>
+                    <td>Job Title</td>
+                    <td>Company</td>
+                    <td>LinkedIn</td>
+                    <td>Meeting Method</td>
+                    <td>Message</td>
+                    <td>Mailing Format</td>
+                    <td>Timestamp</td>
+                </tr>
+            </thead>
+            <tbody>
+                <% records.forEach(record => { %>
+                <tr>
+                    <td><%= record.fname %> <%= record.lname %></td>
+                    <td><%= record.jobTitle %></td>
+                    <td><%= record.company %></td>
+                    <td><%= record.lnkIn %></td>
+                    <td><%= record.meeting %></td>
+                    <td><%= record.message %></td>
+                    <td><%= record.format %></td>
+                    <td><%= record.timestamp.toLocaleString() %></td>
+                </tr>
+            </tbody>
+            <% }); %>
+        </table>
+        <script defer> 
+            let table = new DataTable('#record-table');
+        </script>
+    <% } else { %>
+        <p>There are no contacts to display.</p>
+    <% } %>
+</body>
+</html>

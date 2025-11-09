@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="images/1484799.png" type="image/x-icon">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/header-style.css">
     <script src="js/formValidation.js" defer></script>
     <title>Contact Form</title>
 </head>
 <body>
+    <%- include('partials/header') %>
     <div class="form-container">
         <h1>Contact Form</h1>
         <form action="/submit-form" id="form" method="post">
@@ -25,7 +27,7 @@
                 </div>
                 <div class="form-group">
                     <label for="job-title">Job Title</label>
-                    <input type="text" id="job-title" name="job-title">
+                    <input type="text" id="job-title" name="jobTitle">
                 </div>
             </div>
 
@@ -36,8 +38,8 @@
                 </div>
                 <div class="form-group">
                     <label for="lnk-in">LinkedIn URL</label>
-                    <span id="err-url" class="error">Must enter valid URL!</span>
-                    <input type="text" id="lnk-in" name="lnk-in">
+                    <span id="err-url" class="error">Must enter valid URL! https://linkedin.com/in/</span>
+                    <input type="text" id="lnk-in" name="lnkIn">
                 </div>
                 <div class="form-group">
                     <label for="email">Email Address</label>
@@ -59,7 +61,7 @@
                 </div>
                 <div class="form-group meeting-other" id="other-meeting-group">
                     <label for="meeting-other">Other (please specify)</label>
-                    <input type="text" id="meeting-other" name="meeting-other">
+                    <input type="text" id="meeting-other" name="meetingOther">
                 </div>
             </div>
 
@@ -90,6 +92,5 @@
             <button type="submit">Submit</button>
         </form>
     </div>
-    <a href="https://github.com/allenres/guestbook-form">https://github.com/allenres/guestbook-form</a>
 </body>
 </html>

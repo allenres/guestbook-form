@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/1484799.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/header-style.css">
+    <script src="js/formValidation.js" defer></script>
+    <title>Thank You</title>
+</head>
+
+<body>
+    <%- include('partials/header') %>
+    <div class="form-container">
+        <h4>Your form has been submitted!</h4>
+        <p><b>First Name: </b> <%= record.fname %></p>
+        <p><b>Last Name: </b> <%= record.lname %></p>
+        <p><b>Job Title: </b> <%= record.jobTitle %></p>
+        <p><b>Company: </b> <%= record.company %></p>
+        <p><b>LinkedIn: </b> <%= record.lnkIn %></p>
+        <p><b>Meeting Method: </b> <%= record.meeting %></p>
+        <p><b>Message: </b> <%= record.message %></p>
+        <p><b>Mailing Format: </b> <%= record.format %></p>
+
+        <a href="/">Back To Homepage</a>
+        </form>
+    </div>
+    <a href="https://github.com/allenres/guestbook-form">https://github.com/allenres/guestbook-form</a>
+</body>
+
+</html>

@@ -17,7 +17,7 @@ document.getElementById("form").onsubmit = () =>  {
         document.getElementById("err-lname").style.display = "block";
         isValid = false;
     }
-    if(URL.substring(0, 24) !== "https://linkedin.com/in/") {
+    if(URL.substring(0, 24) !== "https://linkedin.com/in/") { 
         if (URL.length !== 0) {
             document.getElementById("err-url").style.display = "block";
             isValid = false;

@@ -5,6 +5,7 @@ import express from 'express';
 const app = express();
 
 // Enable static file serving (client side file that does not communicate with database)
+app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.use(express.urlencoded({extended:true}));
 
@@ -18,18 +19,23 @@ const PORT = 3002;
 // res: allows us to send back a response to the client
 app.get('/', (req, res) => {
     // send "Hello, World!" as a response to the client
-    res.sendFile(`${import.meta.dirname}/views/home.html`);
+    res.render('home');
 });
 
 app.get('/admin', (req, res) => {
-    res.send({records})
+    res.render('admin', {records});
+})
+
+app.get('/contact', (req, res) => {
+    res.render('contact');
 })
 
 app.post('/submit-form', (req, res) => {
     const record = req.body;
+    record.timestamp = new Date();
     records.push(record);
     console.log(records);
-    res.sendFile(`${import.meta.dirname}/views/confirm.html`);
+    res.render('confirm', {record});
 })
 
 // start the server and make it listen on the port specified above
