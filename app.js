@@ -23,7 +23,7 @@ const pool = mysql.createPool({
     waitForConnections: true,
     connectionLimit: 10,
     queueLimit: 0
-});
+}).promise();
 
 // define the port number where our server will listen
 const PORT = 3002;
